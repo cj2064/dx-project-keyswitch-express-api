@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+//var mongodb = require('mongodb');
 
 /* GET developers listing. */
 router.get('/', function(req, res, next) {
@@ -8,7 +9,11 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/developer', function(req, res, next) {
-  console.log("developer being posted");
+  let firstName = req.body.firstName;
+  let lastName = req.body.lastName;
+  let favoriteLanguage = req.body.favoriteLanguage;
+  let yearStarted = req.body.yearStarted;
+  console.log("Developer being posted: "+firstName+ " "+lastName);
 });
 
 module.exports = router;
