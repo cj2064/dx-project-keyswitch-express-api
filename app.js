@@ -6,8 +6,9 @@ var logger = require('morgan');
 var cors = require('cors');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var developersRouter = require('./routes/developers');
-var moviesRouter = require('./routes/movies');
+var keyboardsRouter = require('./routes/keyboards');
+// var moviesRouter = require('./routes/movies');
+const mongoConnect = require('./routes/keyboards');
 
 
 var app = express();
@@ -26,8 +27,8 @@ app.use(cors());
 //adding routes to app
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/developers', developersRouter );
-app.use('/movies', moviesRouter );
+app.use('/keyboards', keyboardsRouter );
+// app.use('/movies', moviesRouter );
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -47,3 +48,7 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
+
+// mongoConnect(() => {
+//   app.listen(9001);
+// })
