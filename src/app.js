@@ -4,11 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors');
-var indexRouter = require('.src/routes/index');
-var usersRouter = require('.src/routes/users');
-var keyboardsRouter = require('.src/routes/keyboards');
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+var keyboardsRouter = require('./routes/keyboards');
 // var moviesRouter = require('./routes/movies');
-const mongoConnect = require('.src/routes/keyboards');
+const mongoConnect = require('./routes/keyboards');
 
 
 var app = express();
