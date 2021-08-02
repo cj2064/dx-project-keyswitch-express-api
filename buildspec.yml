@@ -9,14 +9,14 @@ phases:
       - npm install
   build:
     commands:
-      - echo Build completed on `date`
+      - echo Build started on `date`
   post_build:
     commands:
       - echo Build completed on `date`
 #Include only the files required for your application to run.
 artifacts:
   files:
-    - src /**/*
+    - src/**/*
     - app.js
     - package.json
     - node_modules/**/*
